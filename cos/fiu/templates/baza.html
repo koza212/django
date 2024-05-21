@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+<h1> baza List</h1>
+<ul>
+    {% for baza in bazas %}
+    <li>
+        nazwa: {{ baza.title }}: dostepnosc: {% if baza.dostepne %}dostepne{% else %}Nie dostepne{% endif %}: cena: {{baza.cena}}: adres: {{baza.adres}} opis: {{baza.opis}}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
